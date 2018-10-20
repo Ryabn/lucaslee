@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: white;
+    font-family: 'Montserrat';
+}
+nav{
+    height: 8vh;
+    color: black;
+    padding: none;
+    background-color: white;
+}
+img{
+    height: 70vh;
+    width: auto;
+    float: left;
+    margin: 0;
+}
+#section-home{
+    height: 100vh;
+}
+#section-timeline{
+    height: 100vh;
+    padding-top: 15vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../assets/images/4Z2A0349.JPG');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: darken;
+}
+#timeline-holder{
+    height: 70vh;
+    width: 4000vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.name-holder{
+    height: calc(100% - 20vh);
+}
+#name{
+    text-align: center;
+    width: 100%;
+    font-size: 120px;
+    color: white;
+    letter-spacing: 15px;
+    font-style: italic;
+    animation: 1s linear 1 forwards name-glitch;
+}
+.image{
+    float:left;
+    height: 100%;
+    width: auto;
+    background-image: url('../assets/images/4Z2A0292.JPG');
+    /* background-color: green; */
+}
+@keyframes name-glitch{
+    from{
+        color: rgb(200, 200, 200);
+        text-shadow: 0px 0 0 rgb(200, 200, 200);
+    }to{
+        color: white;
+        text-shadow: 20px -2px 0 rgb(220, 220, 220), -2px 1px 0 rgb(180, 180, 180);
+    }
+}
