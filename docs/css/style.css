@@ -4,10 +4,19 @@ body{
     font-family: 'Montserrat';
 }
 nav{
+    padding-left: 15px;
     height: 8vh;
     color: black;
     padding: none;
     background-color: white;
+}
+ul{
+    height: 100%;
+}
+li a{
+    margin: auto;
+    color: black !important;
+    height: 100%;
 }
 img{
     height: 70vh;
@@ -27,6 +36,7 @@ img{
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: darken;
+    background-repeat: no-repeat;
 }
 #timeline-holder{
     height: 70vh;
@@ -37,14 +47,30 @@ img{
 .name-holder{
     height: calc(100% - 20vh);
 }
-#name{
+.name-full{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+.name{
     text-align: center;
-    width: 100%;
-    font-size: 120px;
-    color: white;
-    letter-spacing: 15px;
+    width: 100vw;
     font-style: italic;
-    animation: 1s linear 1 forwards name-glitch;
+    animation: 1s linear forwards alternate 2 name-glitch;
+    color: white;
+    /* letter-spacing: 15px; */
+    font-size: 50px;
+
+}
+#name-1{
+    animation-delay: 0.5s;
+}
+#name-2{
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+#name-3{
+    animation-delay: 1.5s;
 }
 .image{
     float:left;
@@ -53,9 +79,37 @@ img{
     background-image: url('../assets/images/4Z2A0292.JPG');
     /* background-color: green; */
 }
+
+@media (min-width: 768px) {
+    .name{
+        letter-spacing: 20px;
+        font-size: 100px;
+    }
+}
+@media (min-width: 992px) {
+    .name{
+        letter-spacing: 30px;
+        font-size: 130px;
+    }
+}
+@media (min-width: 1200px) {
+    .name{
+        letter-spacing: 20px;
+        font-size: 160px;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }to{
+        opactity: 1;
+    }
+}
 @keyframes name-glitch{
     from{
-        color: rgb(200, 200, 200);
+        color: white;
+        /* color: rgb(200, 200, 200); */
         text-shadow: 0px 0 0 rgb(200, 200, 200);
     }to{
         color: white;
