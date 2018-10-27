@@ -57,6 +57,6 @@ function displayImages(){
 }
 function getImage(imageName){
     let baseUrl = "./assets/images/" + imageName;
-    let htmltemplate = `<img src="${baseUrl}">`;
+    let htmltemplate = `<img data-src="${baseUrl}">`;
     document.getElementById('image-holder').insertAdjacentHTML('beforeend', htmltemplate);
 }
