@@ -7,43 +7,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>offluckas</title>
-        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css"  href="assets/libraries/materialize.min/materialize.min.css">
         <script src="assets/libraries/materialize.min/materialize.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="assets/libraries/cachu/cachu-slider.css">
-        <script type="text/javascript" src="assets/libraries/cachu/cachu-slider.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="assets/libraries/cachu/cachu-slider.css">
+        <script type="text/javascript" src="assets/libraries/cachu/cachu-slider.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="assets/libraries/fullpage.min/fullpage.min.css">
+        <script type="text/javascript" src="assets/libraries/fullpage.min/fullpage.min.js"></script>
 
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
         <script src="js/script.js"></script>
     </head>
     <body onload="load();">
-        <div class="cachu__container cachu__container--content-fit">
-            <div class="cachu__sections">
-                <section class="cachu__section">
-                    <div id="section-home">
-                        <nav>
-                            <ul>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="name-holder valign-wrapper">
-                            <div class="name-full">
-                                <div id="name-1" class="name">offluckas</div>
-                                <div id="name-2" class="name">offluckas</div>
-                                <div id="name-3" class="name">offluckas</div>
-                            </div>
-                        </div>
+        <div id="fullpage">
+            <div class="section" id="section-home">
+                <nav>
+                    <ul>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="name-holder valign-wrapper">
+                    <div class="name-full">
+                        <div id="name-1" class="name">offluckas</div>
+                        <div id="name-2" class="name">offluckas</div>
+                        <div id="name-3" class="name">offluckas</div>
                     </div>
-                </section>
-                <section class="cachu__section" id="section-timeline">
-                    <div id="timeline-holder">
-                        
-                    </div>
-                </section>
+                </div>
+            </div>
+            <div class="section" id="section-timeline">
+                <div id="timeline-holder">
+                    <div id="image-holder"></div>
+                </div>
             </div>
         </div>
     </body>

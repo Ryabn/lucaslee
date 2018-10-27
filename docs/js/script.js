@@ -43,11 +43,11 @@ const files = [
 ];
 function load(){    
     const options = {
-        scrollingLoop: false,
-        navigationEnabled: false
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        autoScrolling:true,
     };
-    let slider = new Cachu(document.querySelector('.cachu__container'), options);
-    slider.run();
+    new fullpage('#fullpage', options);
+    fullpage_api.setAllowScrolling(true);
     displayImages();
 }
 function displayImages(){
@@ -58,5 +58,5 @@ function displayImages(){
 function getImage(imageName){
     let baseUrl = "./assets/images/" + imageName;
     let htmltemplate = `<img src="${baseUrl}">`;
-    document.getElementById('timeline-holder').insertAdjacentHTML('beforeend', htmltemplate);
+    document.getElementById('image-holder').insertAdjacentHTML('beforeend', htmltemplate);
 }
