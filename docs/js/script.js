@@ -42,13 +42,18 @@ const files = [
     "LUCK3710.JPG",
 ];
 function load(){    
-    const options = {
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        autoScrolling:true,
-    };
-    new fullpage('#fullpage', options);
-    fullpage_api.setAllowScrolling(true);
-    displayImages();
+    document.getElementById('edits-page').style.visibility = 'hidden';
+    document.getElementById('contact-page').style.visibility = 'hidden';
+    if(window.innerWidth < 768){
+        setTimeout(function(){
+            startAnim();
+        }, 5000);
+    }
+    if(!((document.location.hash == '') || (document.location.hash == '#portfolio'))){
+        router(document.location.hash.substr(1));
+    }else{
+        document.getElementById('portfolio').classList = 'selected';
+    }
 }
 function displayImages(){
     files.forEach((e) => {
@@ -59,4 +64,30 @@ function getImage(imageName){
     let baseUrl = "./assets/images/" + imageName;
     let htmltemplate = `<img data-src="${baseUrl}">`;
     document.getElementById('image-holder').insertAdjacentHTML('beforeend', htmltemplate);
+}
+function router(page){
+    if(!document.getElementById(page).classList.contains('selected')){
+    document.getElementById('nav').childNodes.forEach(element => {
+        if(element.firstChild!==null && element.firstChild.classList !== undefined){
+            element.firstChild.classList.remove('selected');
+            let el = document.getElementById(element.firstChild.id + "-page");
+            if(el.style.visibility !== 'hidden'){
+                el.classList = 'page';
+                void el.offsetWidth;
+                el.classList = 'page fade';
+                setTimeout(function(){
+                    el.style.visibility = 'hidden';
+                }, 250);
+            }else{
+                el.style.visibility = 'hidden';
+            }
+        }
+    });
+    document.getElementById(page).classList += 'selected';
+    document.getElementById(page + "-page").classList = 'page';
+    void document.getElementById(page + "-page").offsetWidth;
+    document.getElementById(page + "-page").classList = "page fade reverse";
+    document.getElementById(page + "-page").style.visibility = 'visible';
+    console.log(page + '-page');
+    }
 }

@@ -7,44 +7,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>offluckas</title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100|Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css"  href="assets/libraries/materialize.min/materialize.min.css">
         <script src="assets/libraries/materialize.min/materialize.min.js"></script>
 
-        <!-- <link rel="stylesheet" type="text/css" href="assets/libraries/cachu/cachu-slider.css">
-        <script type="text/javascript" src="assets/libraries/cachu/cachu-slider.js"></script> -->
-        <link rel="stylesheet" type="text/css" href="assets/libraries/fullpage.min/fullpage.min.css">
-        <script type="text/javascript" src="assets/libraries/fullpage.min/fullpage.min.js"></script>
-
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style-new.css" />
         <script src="js/script.js"></script>
+
+        <script src="assets/libraries/fadeImages/script.js"></script>
     </head>
     <body onload="load();">
-        <div id="fullpage">
-            <div class="section" id="section-home">
-                <nav>
-                    <ul>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="name-holder valign-wrapper">
-                    <div class="name-full">
-                        <div id="name-1" class="name">offluckas</div>
-                        <div id="name-2" class="name">offluckas</div>
-                        <div id="name-3" class="name">offluckas</div>
+        <div id="root">
+            <div id="portfolio-page" class="page">
+                <div id="name-2" class="name">OFFLUCKAS</div>
+                <div id="name-1" class="name">OFFLUCKAS</div>
+                <div class="img-holder">
+                    <div class="fade-image--holder">
+                        <img id="img-1" class="img-1" src="assets/images/4Z2A1092.JPG">
+                        <img id="img-1--behind" class="img-1--behind" src="assets/images/4Z2A1092.JPG">
+                    </div>
+                    <div class="fade-image--holder">
+                        <img id="img-2" src="assets/images/4Z2A0528.JPG">
+                    </div>
+                    <div class="fade-image--holder">
+                        <img id="img-3" src="assets/images/4Z2A0708.JPG">
                     </div>
                 </div>
             </div>
-            <div class="section" id="section-timeline">
-                <div id="timeline-holder">
-                    <div id="image-holder"></div>
+            <div id="edits-page" class="page">sbrs</div>
+            <div id="contact-page" class="page">
+
+                <div class="contact-link" onclick="window.location='https://www.instagram.com/offluckas/';">
+                    <div class="ig-icon">
+                    </div>  
+                    <p>@offluckas</p>
                 </div>
             </div>
-            <div class="section" id="section-contact">
-                
+            <div id="nav">
+                <div class="tab" onclick="router('portfolio');"><a id="portfolio" href="#portfolio">PORTFOLIO</a></div>
+                <div class="tab" style="pointer-events: none;" onclick="router('edits');"><a style="color: #898989 !important; " id="edits" href="#edits">EDITING</a></div>
+                <div class="tab" onclick="router('contact');"><a id="contact" href="#contact">CONTACT</a></div>
             </div>
         </div>
     </body>
