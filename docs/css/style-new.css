@@ -9,6 +9,11 @@ img{
     margin: auto;
     position: absolute;
 }
+.img-frame{
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+}
 .page{
     position: fixed;
     top: 0;
@@ -51,11 +56,6 @@ img{
     display: grid;
     grid-template-columns: repeat(1, 70vw);
 }
-.fade-image--holder{
-    display: flex; 
-    justify-content: center;
-    align-content: center;
-}
 #name-1{
     font-size: 30px;
     animation: 3s 500ms ease-out forwards name-show-small;
@@ -96,12 +96,6 @@ a:hover{
     height: 50vh;
     width: 70vw;
     margin: 0 calc( 50vw - ( 50vh / 3 ) ) 0 calc( 50vw - ( 50vh / 3 ) );
-}
-.juxtapose-before{
-    content:url('./assets/images/4Z2A2696-2vert.JPG');
-}
-.juxtapose-after{
-    content:url('./assets/images/4Z2A2696vert.JPG');
 }
 #nav{
     display: grid;
@@ -172,14 +166,8 @@ a:hover{
     animation-direction: normal;
 }
 #img-1{
-    z-index: 2;
-}
-.img-1{
     opacity: 0;
     animation: 1s 3.5s linear forwards fade, 1s 3.5s ease-out forwards moveup;
-}
-.img-1--behind{
-    opacity: 0;
 }
 #img-2{
     opacity: 0;
@@ -247,20 +235,13 @@ a:hover{
 }
 @media (min-width: 1200px) {
     #name-1{
-        letter-spacing: 20px;
         font-size: 160px;
         top: calc(50vh - 160px);
     }
     .img-holder{
         grid-template-columns: repeat(3, 1fr);
     }
-    #img-2{
-        display: block;
-    }
     #img-3{
         display: block;
-    }
-    #img-1--behind{
-        display: none;
     }
 }

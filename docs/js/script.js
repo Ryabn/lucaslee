@@ -45,24 +45,21 @@ function load(){
     document.getElementById('edits-page').style.visibility = 'hidden';
     document.getElementById('contact-page').style.visibility = 'hidden';
     if(window.innerWidth < 768){
-        setTimeout(function(){
-            startAnim();
-        }, 5000);
     }
     if(!((document.location.hash == '') || (document.location.hash == '#portfolio'))){
         router(document.location.hash.substr(1));
     }else{
         document.getElementById('portfolio').classList = 'selected';
     }
-    if(window.innerWidth > 768){
+    if(window.innerWidth < 768){
         slider = new juxtapose.JXSlider('#juxtapose-holder',
         [
             {
-                src: './assets/images/4Z2A2696-2.jpg',
+                src: './assets/prod-images/4Z2A1182-2.jpg',
                 label: 'BEFORE',
             },
             {
-                src: './assets/images/4Z2A2696.JPG',
+                src: './assets/prod-images/4Z2A1182.jpg',
                 label: 'AFTER',
             }
         ],
@@ -77,32 +74,22 @@ function load(){
         slider = new juxtapose.JXSlider('#juxtapose-holder',
         [
             {
-                src: './assets/images/4Z2A2696-2vert.jpg',
+                src: './assets/prod-images/4Z2A2696-2.jpg',
                 label: 'BEFORE',
             },
             {
-                src: './assets/images/4Z2A2696vert.JPG',
+                src: './assets/prod-images/4Z2A2696.jpg',
                 label: 'AFTER',
             }
         ],
         {
-            animate: true,
+            animate: false,
             showLabels: true,
-            showCredits: true,
+            showCredits: false,
             startingPosition: "50%",
             makeResponsive: true
         });
     }
-}
-function displayImages(){
-    files.forEach((e) => {
-        getImage(e);
-    });
-}
-function getImage(imageName){
-    let baseUrl = "./assets/images/" + imageName;
-    let htmltemplate = `<img data-src="${baseUrl}">`;
-    document.getElementById('image-holder').insertAdjacentHTML('beforeend', htmltemplate);
 }
 function router(page){
     if(!document.getElementById(page).classList.contains('selected')){
