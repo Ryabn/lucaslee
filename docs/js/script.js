@@ -54,6 +54,45 @@ function load(){
     }else{
         document.getElementById('portfolio').classList = 'selected';
     }
+    if(window.innerWidth > 768){
+        slider = new juxtapose.JXSlider('#juxtapose-holder',
+        [
+            {
+                src: './assets/images/4Z2A2696-2.jpg',
+                label: 'BEFORE',
+            },
+            {
+                src: './assets/images/4Z2A2696.JPG',
+                label: 'AFTER',
+            }
+        ],
+        {
+            animate: false,
+            showLabels: true,
+            showCredits: false,
+            startingPosition: "50%",
+            makeResponsive: true
+        });
+    }else{
+        slider = new juxtapose.JXSlider('#juxtapose-holder',
+        [
+            {
+                src: './assets/images/4Z2A2696-2vert.jpg',
+                label: 'BEFORE',
+            },
+            {
+                src: './assets/images/4Z2A2696vert.JPG',
+                label: 'AFTER',
+            }
+        ],
+        {
+            animate: true,
+            showLabels: true,
+            showCredits: true,
+            startingPosition: "50%",
+            makeResponsive: true
+        });
+    }
 }
 function displayImages(){
     files.forEach((e) => {
@@ -88,6 +127,5 @@ function router(page){
     void document.getElementById(page + "-page").offsetWidth;
     document.getElementById(page + "-page").classList = "page fade reverse";
     document.getElementById(page + "-page").style.visibility = 'visible';
-    console.log(page + '-page');
     }
 }

@@ -86,6 +86,23 @@ a:hover{
     border-bottom: 3px solid #151515 !important;
     border-radius: 4px;
 }
+.juxtapose{
+    height: 50vh !important;
+    width: calc(100vh/3) !important;
+}
+#juxtapose-holder{
+    position: fixed;
+    top: 20vh;
+    height: 50vh;
+    width: 70vw;
+    margin: 0 calc( 50vw - ( 50vh / 3 ) ) 0 calc( 50vw - ( 50vh / 3 ) );
+}
+.juxtapose-before{
+    content:url('./assets/images/4Z2A2696-2vert.JPG');
+}
+.juxtapose-after{
+    content:url('./assets/images/4Z2A2696vert.JPG');
+}
 #nav{
     display: grid;
     grid-template-columns: repeat( 3, 1fr);
@@ -204,6 +221,17 @@ a:hover{
         width: 40vw;
         margin: 0 30vw 0 30vw;
         font-size: 20px;
+    }
+    .juxtapose{
+        height: 50vh !important;
+        width: 75vh !important;
+    }
+    #juxtapose-holder{
+        position: fixed;
+        top: 20vh;
+        height: 50vh;
+        width: 70vw;
+        margin: 0 calc( 50vw - 37.5vh ) 0 calc( 50vw - 37.5vh );
     }
 }
 @media (min-width: 992px) {
