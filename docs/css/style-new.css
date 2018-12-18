@@ -9,6 +9,9 @@ img{
     margin: auto;
     position: absolute;
 }
+a.jx-knightlab{
+    z-index: -1 !important;
+}
 .img-frame{
     display: flex; 
     justify-content: center;
